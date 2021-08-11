@@ -4,7 +4,7 @@
 
 
 
-<img src="img/docker.svg" alt="icons8-docker" style="zoom:450%;" /> <img src="img/texto.svg" alt="texto" style="zoom:33%;" />
+![docker](img/docker.svg) ![texto](img/texto.svg)
 
 ------
 
@@ -12,6 +12,27 @@ Version 12.1.4 dockAngl
 
 Copyright (C) 2021 Hector Orlando, Crispens
 [hector.or.cr@gmail.com](mailto:hector.or.cr@gmail.com)
+
+------
+
+
+
+## Tabla de contenido
+
+- [Docker Image for Angular](#docker-image-for-angular)
+  - [Descripción](#descripción)
+  - [Contenido de esta imagen](#contenido-de-esta-imagen)
+  - [Comandos disposibles de angular/cli](#comandos-disposibles-de-angularcli)
+  - [Como usar esta imagen](#como-usar-esta-imagen)
+  - [Ejemplos de como crear el contenedor](#ejemplos-de-como-crear-el-contenedor)
+  - [Links de interes](#links-de-interes)
+  - [Licencia](#licencia)
+    - [GNU General Public License](#gnu-general-public-license)
+
+------
+
+
+
 
 ## Descripción
 
