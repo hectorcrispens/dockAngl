@@ -10,8 +10,12 @@
 
 Version 12.1.4 dockAngl
 
-Copyright (C) 2021 Hector Orlando, Crispens
-[hector.or.cr@gmail.com](mailto:hector.or.cr@gmail.com)
+Copyright (C) 2021.
+
+- Sergio Ridaura, sergrida
+  https://sergioridaura.com - [info@sergioridaura.com](mailto:info@sergioridaura.com)
+- Héctor Orlando, hcrispens
+  [hector.or.cr@gmail.com](mailto:hector.or.cr@gmail.com)
 
 ------
 
