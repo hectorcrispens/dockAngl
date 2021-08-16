@@ -1,23 +1,22 @@
+![docker](img/docker.svg) ![texto](img/texto.svg)
+
+
+
 # Docker Image for Angular
+
+Una imagen para el desarrollo de aplicaciones Angular con Docker
 
 [![docker](https://img.shields.io/badge/Docker-19.03.8-informational?style=plastic&logo=docker)](https://www.docker.com/) [![node](https://img.shields.io/badge/Node-14.17.3:Slim-success?style=plastic&logo=node.js)](https://nodejs.org/es/) [![npm](https://img.shields.io/badge/npm-6.14.13-cb3837?style=plastic&logo=npm)](https://www.npmjs.com/)  [![angular](https://img.shields.io/badge/Angular/cli-12.1.4-cb3837?style=plastic&logo=AngularJS)](https://angular.io/cli)
 
 
 
-![docker](img/docker.svg) ![texto](img/texto.svg)
+## Contributors
 
-------
+[![hector](img/avatar-hector.svg)](https://www.linkedin.com/in/hector-orlando-25124a18a/)  [![sergio](img/avatar-sergio.svg)](https://www.linkedin.com/in/sergio-ridaura/)
+
+ 
 
 Version 12.1.4 dockAngl
-
-Copyright (C) 2021.
-
-- Sergio Ridaura, sergrida
-  https://sergioridaura.com - [info@sergioridaura.com](mailto:info@sergioridaura.com)
-- Héctor Orlando, hcrispens
-  [hector.or.cr@gmail.com](mailto:hector.or.cr@gmail.com)
-
-------
 
 
 
