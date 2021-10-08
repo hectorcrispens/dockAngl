@@ -23,10 +23,13 @@ Version 12.1.4 dockAngl
 ## Tabla de contenido
 
 - [Docker Image for Angular](#docker-image-for-angular)
+  - [Contributors](#contributors)
+  - [Tabla de contenido](#tabla-de-contenido)
   - [Descripción](#descripción)
   - [Contenido de esta imagen](#contenido-de-esta-imagen)
   - [Comandos disposibles de angular/cli](#comandos-disposibles-de-angularcli)
   - [Como usar esta imagen](#como-usar-esta-imagen)
+  - [Variables para la construcción de la imagen](#variables-para-la-construcción-de-la-imagen)
   - [Ejemplos de como crear el contenedor](#ejemplos-de-como-crear-el-contenedor)
   - [Links de interes](#links-de-interes)
   - [Licencia](#licencia)
@@ -55,7 +58,7 @@ La herramienta de linea de comando **angular/cli** permite muchas cosas, desde i
 
 **node:** 14.17.3 Slim
 
-**npm: **6.14.13
+**npm:** 6.14.13
 
 **angular/cli:** 12.1.4
 
@@ -66,11 +69,11 @@ La herramienta de linea de comando **angular/cli** permite muchas cosas, desde i
 ## Comandos disposibles de angular/cli
 
   **add** Adds support for an external library to your project.
-  **analytics** Configures the gathering of Angular CLI usage metrics. See https://angular.io/cli/usage-analytics-gathering.
-  **build** (b) Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.
+  **analytics** Configures the gathering of Angular CLI usage metrics. See https://angular.io/cli/usage-a  		nalytics-gathering.
+  **build** (b) Compiles an Angular app into an output directory named dist/ at the given output path. 		Must be executed from within a workspace directory.
   **deploy** Invokes the deploy builder for a specified project or for the default project in the workspace.
   **config** Retrieves or sets Angular configuration values in the angular.json file for the workspace.
-  **doc** (d) Opens the official Angular documentation (angular.io) in a browser, and searches for a given keyword.
+  **doc** (d) Opens the official Angular documentation (angular.io) in a browser, and searches for a 		given keyword.
   **e2e** (e) Builds and serves an Angular app, then runs end-to-end tests.
   **extract-i18n** (i18n-extract, xi18n) Extracts i18n messages from source code.
   **generate** (g) Generates and/or modifies files based on a schematic.
@@ -94,6 +97,36 @@ Descargue esta imagen ejecutando:
 ```bash
 docker pull hectorcrispens/angl-cli
 ```
+
+O si prefiere puede crear la imagen a partir del archivo dockerfile de este repositorio. Clone primero el repositorio de git y luego construya la imagen del contenedor a partir del `dockerfile`.
+
+```bash
+# Clonado del repositorio
+git clone git@github.com:hectorcrispens/dockAngl.git
+cd dockAngl
+
+# Construcción de la imagen
+docker build -t angl --file angl.Dockerfile .
+
+```
+
+
+
+## Variables para la construcción de la imagen
+
+El usuario por defecto con el que se construye la imagen del contenedor, por defecto es **dockangl** y el password tambien es **dockangl**, sin embargo cuando se construye la imagen puede pasar como parámetro usuario para cuando se cree un archivo el usuario sea el que usted tiene por defecto en su host y no tenga que andar cambiando el owner de los archivos posteriormente. La sintaxis para hacer el build seria la siguiente:
+
+```bash
+docker build --build-arg NAME=$(whoami) --build-arg PW=yourpassword -t angl --file angl.Dockerfile .
+```
+
+Tambien puede pasar las credenciales para **git**
+
+```bash
+docker build --build-arg USER=$(whoami) --build-arg PW=youremail -t angl --file angl.Dockerfile .
+```
+
+
 
 La sintaxis para desplegar un contenedor de docker a partir de una imagen es la siguiente:
 
