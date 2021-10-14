@@ -1,19 +1,12 @@
 FROM node:fermium-slim
+
+COPY script.sh /usr/local/bin/angl
+RUN chmod +x /usr/local/bin/angl
 WORKDIR /angl
 
 # Configuracion de git
 ARG NAME=name
 ARG EMAIL=name@youremail.com
-
-# Gestion de usuario del contenedor
-ARG USER=dockangl
-ARG PW=dockangl
-
-RUN groupadd ${USER}
-RUN useradd  ${USER} -g ${USER}
-
-RUN chpasswd "${USER}:${PW}"
-
 
 RUN apt-get update && \
   apt-get upgrade -y && \
@@ -25,6 +18,7 @@ RUN apt-get update && \
   git config --global user.name "${NAME}" && \
   npm install -g @angular/cli
 
-USER ${USER}
 
 EXPOSE 4200
+
+ENTRYPOINT [ "angl" ]
