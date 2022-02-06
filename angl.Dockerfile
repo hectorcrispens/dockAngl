@@ -16,7 +16,8 @@ RUN apt-get update && \
   zip && \
   git config --global user.email "${EMAIL}" && \
   git config --global user.name "${NAME}" && \
-  npm install -g @angular/cli
+  npm install -g @angular/cli &&\
+  npm install -g sass
 
 
 EXPOSE 4200
